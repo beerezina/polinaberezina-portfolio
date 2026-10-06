@@ -1,0 +1,26 @@
+name: Temporary domain diagnostics
+on: workflow_dispatch
+permissions: {}
+jobs:
+  dns:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Inspect public and authoritative DNS
+        shell: bash
+        run: |
+          for server in 1.1.1.1 8.8.8.8 ns1.reg.ru ns2.reg.ru; do
+            for record in A AAAA CAA SOA DS; do
+              echo "SERVER=$server RECORD=$record"
+              dig @$server polinaberezina.ru $record +time=2 +tries=1
+            done
+          done
+          for server in ns1.reg.ru ns2.reg.ru; do
+            echo "TCP SERVER=$server"
+            dig @$server polinaberezina.ru A +tcp +time=2 +tries=1
+            echo "NO EDNS SERVER=$server"
+            dig @$server polinaberezina.ru A +noedns +time=2 +tries=1
+          done
+          dig www.polinaberezina.ru CNAME
+          curl -I --max-time 10 http://polinaberezina.ru/ || true
+          curl -I --max-time 10 https://polinaberezina.ru/ || true
