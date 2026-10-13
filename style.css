@@ -127,3 +127,10 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline-color:var(--a
 .wordmark{display:inline-flex;align-items:center;gap:7px;line-height:1}
 .wordmark .flower-mark{font-size:23px;margin-left:0;mix-blend-mode:screen;transform:translateY(-3px)}
 @media(max-width:760px){.wordmark .flower-mark{font-size:20px;transform:translateY(-2px)}}
+/* The three audience portraits and the UI kit need room to be read. */
+body[data-project="arca"] #chapter-2 .chapter-images .media-button:nth-child(5),
+body[data-project="arca"] #chapter-2 .chapter-images .media-button:nth-child(6),
+body[data-project="arca"] #chapter-2 .chapter-images .media-button:nth-child(7),
+body[data-project="arca"] #chapter-3 .chapter-images .media-button:nth-child(3),
+body[data-project="arca"] #chapter-3 .chapter-images .media-button:nth-child(4),
+body[data-project="arca"] #chapter-4 .chapter-images .media-button:nth-child(2){width:100%;align-self:stretch}

@@ -1,4 +1,4 @@
-const PDF=(id,n)=>`assets/pdf/${id}/${String(n).padStart(3,'0')}.webp`;
+const PDF=(id,n)=>`assets/pdf/${id}/${String(n).padStart(3,'0')}.webp${id==='arca'?'?v=2':''}`;
 const LIVE=(name,n)=>`assets/live/technopryad/${name}-${String(n).padStart(2,'0')}.webp`;
 const CASE_COVERS={
   vedati:'assets/pdf/covers/vedati.webp',
@@ -25,11 +25,11 @@ const CASE_STORY={
     [PDF('vedati',21),PDF('vedati',22),PDF('vedati',23),PDF('vedati',24),PDF('vedati',25),PDF('vedati',26),PDF('vedati',27),PDF('vedati',29),PDF('vedati',31),PDF('vedati',32)]
   ],
   arca:[
-    [PDF('arca',2),PDF('arca',4),PDF('arca',7),PDF('arca',9),PDF('arca',11)],
-    [PDF('arca',12),PDF('arca',13),PDF('arca',14),PDF('arca',15),PDF('arca',16)],
-    [PDF('arca',27),PDF('arca',28),PDF('arca',30)],
-    [PDF('arca',18),PDF('arca',19),PDF('arca',20),PDF('arca',29),PDF('arca',33),PDF('arca',34),PDF('arca',35)],
-    [PDF('arca',24),PDF('arca',30),PDF('arca',31),PDF('arca',36),PDF('arca',37),PDF('arca',38),PDF('arca',40),PDF('arca',42)]
+    [PDF('arca',1),PDF('arca',2),PDF('arca',3),PDF('arca',4)],
+    [PDF('arca',5),PDF('arca',6),PDF('arca',8),PDF('arca',10),PDF('arca',12),PDF('arca',13),PDF('arca',14),PDF('arca',15),PDF('arca',16)],
+    [PDF('arca',17),PDF('arca',18),PDF('arca',19),PDF('arca',20),PDF('arca',21),PDF('arca',22),PDF('arca',23)],
+    [PDF('arca',25),PDF('arca',26),PDF('arca',27),PDF('arca',28),PDF('arca',29),PDF('arca',30),PDF('arca',31)],
+    [PDF('arca',24),PDF('arca',32),PDF('arca',33),PDF('arca',34),PDF('arca',35),PDF('arca',36),PDF('arca',37),PDF('arca',38),PDF('arca',39),PDF('arca',40),PDF('arca',41),PDF('arca',42),PDF('arca',43),PDF('arca',44),PDF('arca',45)]
   ],
   luvka:[
     [PDF('luvka',1),PDF('luvka',2),PDF('luvka',3)],
@@ -119,7 +119,7 @@ function caseGallery(id){
     ...[36,37,38,40].map(n=>({src:PDF('vedati',n),thumb:`assets/pdf-thumbs/vedati/${String(n).padStart(3,'0')}.webp`,group:'БИБЛИОТЕКА И РЕАЛИЗАЦИЯ',slide:n}))
   ];
   if(id==='luvka')return Array.from({length:38},(_,i)=>i+1).filter(n=>n!==13).map(n=>({src:PDF('luvka',n),thumb:`assets/pdf-thumbs/luvka/${String(n).padStart(3,'0')}.webp`,group:n<=11?'КОНЦЕПЦИЯ И ИССЛЕДОВАНИЕ':n<=20?'ДИЗАЙН-СИСТЕМА':n<=31?'НОСИТЕЛИ':'ПРОТОТИП И ИНТЕРФЕЙС',slide:n}));
-  if(id==='arca')return Array.from({length:45},(_,i)=>i+1).filter(n=>n!==26&&n!==32).map(n=>({src:PDF('arca',n),thumb:`assets/pdf-thumbs/arca/${String(n).padStart(3,'0')}.webp`,group:'МАТЕРИАЛЫ ПРОЕКТА',slide:n}));
+  if(id==='arca')return Array.from({length:45},(_,i)=>i+1).map(n=>({src:PDF('arca',n),thumb:`assets/pdf-thumbs/arca/${String(n).padStart(3,'0')}.webp?v=2`,group:n<=4?'ЗАДАЧА И ИДЕЯ':n<=16?'ИССЛЕДОВАНИЕ И ПОРТРЕТЫ':n<=24?'ДИЗАЙН-СИСТЕМА':n<=31?'СЦЕНАРИИ ПРИЛОЖЕНИЯ':'АЙДЕНТИКА И НОСИТЕЛИ',slide:n}));
   if(id==='glasses')return Array.from({length:5},(_,i)=>({src:PDF('hues',i+1),group:'ПРОТОТИП HUES',slide:i+1}));
   if(EXHIBITS[id])return EXHIBITS[id];
   if(id==='trueshkowski')return [0,9,11,12,13,14,15,16,17,18,19].map(n=>({src:PDF('pranna',n),group:n<11?'СИСТЕМА':'НОСИТЕЛИ И УПАКОВКА',slide:n}));
