@@ -134,3 +134,7 @@ body[data-project="arca"] #chapter-2 .chapter-images .media-button:nth-child(7),
 body[data-project="arca"] #chapter-3 .chapter-images .media-button:nth-child(3),
 body[data-project="arca"] #chapter-3 .chapter-images .media-button:nth-child(4),
 body[data-project="arca"] #chapter-4 .chapter-images .media-button:nth-child(2){width:100%;align-self:stretch}
+.chapter-images .slide-link{align-self:flex-end;display:inline-flex;align-items:center;gap:8px;margin:-7px 0 16px;padding:10px 0;color:#f1f1ee;font-size:13px;font-weight:750;text-decoration:underline;text-underline-offset:4px}
+.chapter-images .slide-link:hover{color:var(--project-color)}
+.case-resources{padding:90px 5%;background:#eaeae7;color:#111}.case-resources>span{font-size:11px;font-weight:800;letter-spacing:.09em}.case-resources h2{font-size:clamp(46px,6vw,100px);line-height:.92;letter-spacing:-.07em;margin:20px 0 45px}.case-resources>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px}.case-resources a{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid #aaa;padding:16px 0;color:#111;font-size:16px;font-weight:650}.case-resources a:hover{color:#bc102b}.case-resources .icon{flex:none}
+@media(max-width:760px){.case-resources{padding:65px 18px}.case-resources>div{grid-template-columns:1fr}.case-resources a{font-size:15px}.chapter-images .slide-link{margin:3px 0 20px}}

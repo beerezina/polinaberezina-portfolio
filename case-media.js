@@ -110,6 +110,63 @@ const CASE_ESSAYS={
     {eyebrow:'02 / РЕШЕНИЕ',title:'Сцены вместо пересказа',text:'Структура ведёт зрителя от знакомства и ощущения близости к трагическому повороту. Тёмная палитра, яркие цветовые акценты и контрастный набор текста задают ритм чтения. Полную интерактивную версию можно открыть по ссылке выше.'}
   ]
 };
+// Links transcribed from the original project screenshots. Keep the labels tied
+// to the material shown, especially the three separate Arca scenarios.
+const CASE_SLIDE_LINKS={
+  arca:{
+    [PDF('arca',16)]:['Открыть исследование','https://figma.fun/YkVfT3'],
+    [PDF('arca',26)]:['Смотреть видео: поиск на карте','https://clck.ru/3Mih7N'],
+    [PDF('arca',27)]:['Смотреть видео: добавление объекта','https://clck.ru/3Mih6y'],
+    [PDF('arca',28)]:['Смотреть видео: создание альбома','https://clck.ru/3Mih5r'],
+    [PDF('arca',30)]:['Открыть прототип системы ачивок','https://figma.fun/1Gmul1'],
+    [PDF('arca',35)]:['Открыть стикерпак','https://t.me/addstickers/arca2025'],
+    [PDF('arca',36)]:['Смотреть видео сайта','https://clck.ru/3MigzP'],
+    [PDF('arca',37)]:['Открыть сайт arca','http://arcarem.tilda.ws/']
+  }
+};
+const CASE_RESOURCES={
+  vedati:[
+    ['Первый прототип: десктоп','https://figma.fun/1PPaWR'],
+    ['Первый прототип: мобильный','https://figma.fun/hfGJTE'],
+    ['Видео пользовательского сценария','https://youtu.be/U9olcn2qkr0'],
+    ['Прототип медиа','https://www.figma.com/proto/mfc1SMDw1aH1owrbuhU9MR/'],
+    ['Прототип словаря','https://figma.fun/arfgwM'],
+    ['Дизайн-система в Figma','https://figma.fun/ZkWtAa'],
+    ['Видео проекта: часть 1','https://youtu.be/12k4jRaSEfM'],
+    ['Видео проекта: часть 2','https://youtu.be/Cy_M7GcvHlw'],
+    ['Лонгрид в Figma','https://figma.fun/Ug7w06'],
+    ['Референсы в Pinterest','https://pin.it/6IBXzLfAE'],
+    ['Кейс на Behance','https://www.behance.net/gallery/228829183/vedati'],
+    ['Стикеры Telegram','https://t.me/addstickers/veda_ty'],
+    ['Репозиторий проекта','https://github.com/HSEADC/VEDATI']
+  ],
+  luvka:[
+    ['Исследование в Figma','https://figma.fun/nMdJ5g'],
+    ['Видео проекта','https://www.youtube.com/watch?v=fbeO25Lv_70']
+  ],
+  techstack:[
+    ['Прототип веб-плаката','https://figma.fun/zVgJdY'],
+    ['Код веб-плаката','https://github.com/beerezina/Technopryad'],
+    ['Макет генератора','https://www.figma.com/file/XMOKzFPDRkAmPrEaEerk4E/'],
+    ['Код генератора','https://github.com/beerezina/3M-Technopryad'],
+    ['Макет многостраничного сайта','https://www.figma.com/design/mCmmpYnrwyuMvT30ywBhQ8/'],
+    ['Код многостраничного сайта','https://github.com/beerezina/4M-Technopryad']
+  ],
+  arca:[
+    ['Исследование','https://figma.fun/YkVfT3'],
+    ['Видео сценария 1: поиск на карте','https://clck.ru/3Mih7N'],
+    ['Видео сценария 2: добавление объекта','https://clck.ru/3Mih6y'],
+    ['Видео сценария 3: создание альбома','https://clck.ru/3Mih5r'],
+    ['Прототип системы ачивок','https://figma.fun/1Gmul1'],
+    ['Стикерпак','https://t.me/addstickers/arca2025'],
+    ['Видео сайта','https://clck.ru/3MigzP'],
+    ['Сайт arca','http://arcarem.tilda.ws/']
+  ],
+  glasses:[['Видео прототипа','https://vimeo.com/1042404372?share=copy']],
+  lsp:[['Скринкаст лонгрида','https://rutube.ru/video/private/ac3bbc5714a11f83dc8a97c6e8062a54/?p=twpHYjdcYv6Z0kApYPNWxg']],
+  eden:[['Макет сайта в Figma','https://www.figma.com/design/pMafiMR57RmGeitPOgepz0/']],
+  pranna:[['Сайт бренда из брифа','https://www.pranna.art/']]
+};
 function caseGallery(id){
   if(id==='techstack')return [['ВЕБ-ПЛАКАТ','poster',4],['ГЕНЕРАТОР','generator',2],['МНОГОСТРАНИЧНЫЙ САЙТ','multisite',2],['СТРАНИЦА САЙТА','process',2]].flatMap(([group,key,count])=>Array.from({length:count},(_,i)=>({src:LIVE(key,i+1),group,slide:i+1})));
   if(id==='vedati')return [
