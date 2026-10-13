@@ -136,7 +136,6 @@ const CASE_RESOURCES={
     ['Видео проекта: часть 2','https://youtu.be/Cy_M7GcvHlw'],
     ['Лонгрид в Figma','https://figma.fun/Ug7w06'],
     ['Референсы в Pinterest','https://pin.it/6IBXzLfAE'],
-    ['Кейс на Behance','https://www.behance.net/gallery/228829183/vedati'],
     ['Стикеры Telegram','https://t.me/addstickers/veda_ty'],
     ['Репозиторий проекта','https://github.com/HSEADC/VEDATI']
   ],
