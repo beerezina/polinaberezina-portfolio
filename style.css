@@ -282,3 +282,8 @@ body.case-page[data-project="seven"] .case-fact-grid strong{font-size:24px;overf
 .archive-filter:hover,.archive-filter.active{background:#111;border-color:#111;color:#fff}
 .more-item[hidden]{display:none}
 @media(max-width:760px){.archive-filter-row{flex-wrap:nowrap;overflow-x:auto;margin:-20px -16px 26px;padding:0 16px 8px;scrollbar-width:none}.archive-filter{white-space:nowrap;font-size:11px;padding:8px 12px}}
+.more-item .archive-cover-clip{margin-bottom:10px}
+.more-item .archive-cover-clip img{margin-bottom:0;transform:scale(1.025);transition:transform .35s ease,filter .25s}
+.more-item:hover .archive-cover-clip img{transform:scale(1.06)}
+.more-item.item-seven .archive-cover-clip img{transform:scale(1.09)}
+.more-item.item-seven:hover .archive-cover-clip img{transform:scale(1.125)}
