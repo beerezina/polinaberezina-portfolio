@@ -287,3 +287,25 @@ body.case-page[data-project="seven"] .case-fact-grid strong{font-size:24px;overf
 .more-item:hover .archive-cover-clip img{transform:scale(1.06)}
 .more-item.item-seven .archive-cover-clip img{transform:scale(1.09)}
 .more-item.item-seven:hover .archive-cover-clip img{transform:scale(1.125)}
+@media(min-width:1100px){
+  .home-shell{grid-template-columns:minmax(360px,31%) minmax(0,1fr)}
+  .profile-panel{padding:25px 30px 22px}
+  .profile-main h1{font-size:clamp(66px,5.2vw,82px)}
+  .board{padding-left:clamp(28px,3vw,56px);padding-right:clamp(28px,3vw,56px)}
+  .board-heading{max-width:800px;padding-top:24px}
+  .board-heading h2{font-size:clamp(58px,4.8vw,82px);line-height:1.02}
+  .board-mark{font-size:clamp(55px,5vw,76px)}
+  .board-heading p{font-size:16px;max-width:410px;margin-top:16px}
+  .filter-row{margin-top:20px;margin-bottom:34px}
+  .project-canvas{gap:42px 16px}
+  .tile-1{grid-column:1/span 9}
+  .tile-2{grid-column:6/span 7;margin-top:-2vw}
+  .tile-3{grid-column:1/span 7;margin-top:-2vw}
+  .tile-4{grid-column:5/span 8;margin-top:-1vw}
+  .tile-5{grid-column:1/span 7;margin-top:-1vw}
+  .tile-6{grid-column:4/span 9;margin-top:-2vw}
+  .tile-art{height:clamp(320px,32vw,520px)}
+  .tile-1 .tile-art{height:clamp(420px,40vw,610px)}
+  .tile-label strong{font-size:clamp(24px,2vw,32px)}
+  .project-canvas.filtered .tile-art,.project-canvas.filtered .tile-1 .tile-art{height:clamp(260px,25vw,390px)}
+}
